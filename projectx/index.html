@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Nossa história</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Modal de aviso de som -->
+    <div class="modal" id="soundModal">
+      <div class="modal__overlay" id="modalOverlay"></div>
+      <div class="modal__content">
+        <button class="modal__close" id="modalClose" aria-label="Fechar">&times;</button>
+        <p class="modal__text">Essa página contém som 🎧❤️</p>
+      </div>
+    </div>
+
+    <!-- 1) Nav bar -->
+    <header class="topbar">
+      <h1 class="topbar__title">Nossa história: 09/03/2012 - <span class="infinity">∞</span></h1>
+    </header>
+
+    <main class="page">
+      <!-- 2) Player estilo Spotify -->
+      <section class="section">
+        <div class="player" aria-label="Reprodutor de áudio">
+          <div class="player__meta">
+            <img class="player__cover" src="./assets/cover.jpeg" alt="Capa da música" />
+            <div class="player__text">
+              <p class="player__track" id="trackName">One Billion Days With You</p>
+              <p class="player__artist" id="artistName">Band of Horses</p>
+            </div>
+          </div>
+
+
+          <div class="player__timeline">
+            <span class="player__time" id="currentTime">0:00</span>
+            <input
+              class="player__range"
+              id="seek"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              step="1"
+              aria-label="Controle de progresso"
+            />
+            <span class="player__time" id="duration">0:00</span>
+          </div>
+
+          <div class="player__controls">
+            <button class="btn" id="playBtn" type="button" aria-label="Play">▶</button>
+            <button class="btn btn--ghost" id="pauseBtn" type="button" aria-label="Pause">⏸</button>
+          </div>
+
+          <audio id="audio" preload="metadata">
+            <source src="./assets/songpage.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </section>
+
+      <!-- 3) Texto curto com scroll reveal -->
+      <section class="section">
+        <p class="story reveal">
+          Há 14 anos, começamos essa história juntos de forma despretensiosa,
+          dois adolescentes muito diferentes. Nunca poderíamos imaginar que construiríamos 
+          um sentimento tão forte. Deus na sua infinita sabedoria, quis que nossos caminhos
+           se cruzassem. Ele sabia que pertencíamos um ao outro...
+        </p>
+      </section>
+
+      <!-- 4) Galeria de fotos vertical com scroll reveal -->
+      <section class="section gallery">
+        <figure class="gallery__item reveal">
+          <img src="./assets/img1.jpeg" alt="Foto 1" />
+        </figure>
+        <section class="section">
+        <p class="story reveal">
+          ... inicialmente eu tinha receio de ter conhecido uma pessoa tão maravilhosa
+           tão cedo e estragar tudo, e rapidamente esse sentimento mudou para gratidão a Deus,
+          por me dar a oportunidade de ter você por mais tempo nessa vida tão curta que vivemos...
+
+        </p>
+      </section>
+        <figure class="gallery__item gallery__item--tall reveal">
+          <img src="./assets/img2.jpeg" alt="Foto 2" class="img-top" />
+        </figure>
+        <section class="section">
+        <p class="story reveal">
+          Juntos crescemos como pessoa, como par. Passamos por mudanças individuais
+          e como casal. Vivemos fases maravilhosas, crises difíceis, mas sempre com
+           a certeza de que tínhamos algo sólido.
+          
+        </p>
+      </section>
+        <figure class="gallery__item gallery__item--tall reveal">
+          <img src="./assets/img3.jpeg" alt="Foto 3" class="img-top" />
+        </figure>
+        <section class="section">
+        <p class="story reveal">
+         Falhamos um com o outro. Criamos expectativas um pelo o outro. Tivemos mil maneiras de
+         resolver nossos problemas, mas a maioria das vezes, não conseguimos. O orgulho falava mais alto. 
+         Erros podem custar caro. 
+        </p>
+      </section>
+        <figure class="gallery__item gallery__item--tall reveal">
+          <img src="./assets/img4.jpeg" alt="Foto 4" class="img-top" />
+        </figure>
+        <section class="section">
+        <p class="story reveal">
+          Mesmo errando - e eu reconheço - dei meu melhor. Lutei minhas batalhas pessoais
+          projetando que nosso futuro juntos seria a recompensa. Eu nunca pensei em outro 
+          plano, senão nós. Todo esse tempo separados, foi um tempo de reflexão, 
+          de aprendizado, de crescimento. 
+            E eu sei que você também teve suas perspectivas. 
+        </p>
+      </section>
+        <figure class="gallery__item gallery__item--tall reveal">
+          <img src="./assets/img6.jpeg" alt="Foto 5" class="img-top" />
+        </figure>
+      </section>
+
+      <!-- 5) Outro texto curto com configs semelhantes -->
+      <section class="section">
+        <p class="story reveal">
+          Infelizmente, as vezes o amor pode sofrer uma quebra. Não por falta de sentimento,
+          mas sim por que as coisas não se encaixam mais. Ele se desgasta no meio da rotina,
+          das diferenças e das palavras mal colocadas. É doloroso, mas tentamos seguir em 
+          frente. 
+          Todavia, quando o amor é verdadeiro, ele sempre encontra um jeito de voltar.
+          E quando isso acontece, é como se o tempo tivesse parado, e tudo o que importa
+          é estar junto novamente. Não estivemos separados por 25 anos como o caso do gif
+          abaixo, mas esses 9 meses longe um do outro, foram os mais longos
+          da minha vida. Nunca faltou amor, faltou fôlego. Fôlego se recupera!
+           O coração insiste, e tenho que obedecê-lo; é tempo de redenção...
+        </p>
+      </section>
+
+      <!-- 6) Vídeo centralizado com loop no scroll reveal -->
+      <section class="section">
+        <div class="gifbox reveal">
+          <video
+            id="momentVideo"
+            class="gifbox__img"
+            src="./assets/gif-placeholder.mp4"
+            loop
+            muted
+            playsinline
+          >
+            Seu navegador não suporta vídeo.
+          </video>
+        </div>
+      </section>
+
+      <!-- 7) Texto estático sem animação -->
+      <section class="section">
+        <p class="static">Olhe pela janela...</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__quote">
+        "Então aqui estou de braços abertos, 
+        esperando que você veja o que seu amor significa para mim."
+      </p>
+      <p class="footer__author">Journey - Open Arms</p>
+    </footer>
+
+    <script src="./allcontent.js"></script>
+  </body>
+</html>
